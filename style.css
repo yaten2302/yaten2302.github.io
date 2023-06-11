@@ -353,7 +353,8 @@ button {
         padding: 10rem;
     }
 
-    .home__subtitle {
+    .home__subtitle,
+    .home__subtitle span {
         font-size: 30px;
         letter-spacing: 5px;
     }
