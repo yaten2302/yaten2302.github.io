@@ -12,6 +12,7 @@
     --text-color: #fff;
     --title-color: #00b28a;
     --menu-shadow: rgba(255, 255, 255, 0.15);
+    --subtitle: #b6b5b5;
     /* --title-color-alt: ; */
 
     /* Fonts */
@@ -89,7 +90,7 @@ button {
     cursor: pointer;
 }
 
-/* Reusable CSS Clases */
+/* Reusable CSS */
 .container {
     max-width: 1024px;
     margin-inline: 1.5rem;
@@ -179,7 +180,6 @@ button {
         bottom: -100%;
         left: 0;
         width: 100%;
-        /* background-color: var(--body-color); */
         background: none;
         backdrop-filter: blur(24px);
         padding: 1.5rem 5rem 2.5rem;
@@ -239,7 +239,6 @@ button {
 .home {
     padding: 5rem 2rem;
     text-align: center;
-    height: 100vh;
     width: 100%;
 }
 
@@ -297,6 +296,74 @@ button {
 
 
 
+/* About Section */
+.about {
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.about__title {
+    color: var(--title-color);
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.about__subtitle {
+    color: var(--subtitle);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.about__description {
+    margin-top: 50px;
+}
+
+
+
+/* Contact Section */
+.contact__buttons_container {
+    text-align: center;
+    display: grid;
+    gap: 5rem;
+    padding: 5rem 1rem;
+}
+
+.contact__buttons_container button {
+    background-color: var(--title-color);
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: all .3s;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.contact__buttons_container button:hover {
+    box-shadow: 0 5px 40px 5px var(--title-color);
+}
+
+.contact__buttons_container i {
+    margin: 10px;
+}
+
+.contact__title {
+    color: var(--title-color);
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.contact__subtitle {
+    color: var(--subtitle);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
 /* Media Querries */
 /* For PC */
 @media screen and (min-width: 769px) {
@@ -349,7 +416,7 @@ button {
         font-size: 20px;
     }
 
-    .home {
+    .section {
         padding: 10rem;
     }
 
@@ -359,23 +426,37 @@ button {
         letter-spacing: 5px;
     }
 
-    .home__title {
+    .home__title,
+    .about__title,
+    .contact__title {
         font-size: 50px;
         letter-spacing: 6px;
         margin-bottom: 60px;
     }
 
-    .home_description {
+    .home_description,
+    .about__description {
         font-size: 20px;
         letter-spacing: 4px;
         margin-bottom: 60px;
+    }
+
+    .about__subtitle,
+    .contact__subtitle {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .contact__buttons_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* For Tab */
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .nav__logo {
-        font-size: 37px;
+        font-size: 40px;
         font-weight: var(--font-semi-bold);
         letter-spacing: 5px;
     }
@@ -391,7 +472,7 @@ button {
         letter-spacing: 3px;
     }
 
-    .home {
+    .section {
         padding: 6rem;
     }
 
@@ -401,7 +482,39 @@ button {
         letter-spacing: 5px;
     }
 
-    .home__title {
-        font-size: 40px;
+    .home__title,
+    .about__title,
+    .contact__title {
+        font-size: 60px;
     }
+
+    .about__subtitle,
+    .contact__subtitle {
+        font-size: 25px;
+    }
+
+    .about__description {
+        font-size: 20px;
+    }
+}
+
+.colorise-buttons {
+    color: var(--title-color);
+}
+
+
+/* Light Mode */
+.light-theme {
+    --body-color: #dfdddd;
+    --text-color: #000;
+    --title-color: #00b28a;
+    --menu-shadow: rgba(19, 17, 17, 0.15);
+    --subtitle: #5a5757;
+}
+
+
+/* Navbar Shadow */
+.shadow {
+    box-shadow: 0 -2px 10px var(--menu-shadow);
+    transition: all .4s;
 }
