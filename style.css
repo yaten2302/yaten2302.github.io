@@ -13,6 +13,7 @@
     --title-color: #00b28a;
     --menu-shadow: rgba(255, 255, 255, 0.15);
     --subtitle: #b6b5b5;
+    --title-color-alt: #53d1b615;
     /* --title-color-alt: ; */
 
     /* Fonts */
@@ -284,9 +285,9 @@ button {
 .contact__buttons a {
     background: var(--title-color);
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 50%;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     transition: all .3s;
 }
 
@@ -327,27 +328,42 @@ button {
     display: grid;
     gap: 5rem;
     padding: 5rem 1rem;
+    place-items: center;
 }
 
-.contact__buttons_container button {
-    background-color: var(--title-color);
-    border: none;
+.contact__buttons_container a {
+    background-color: var(--body-color);
     outline: none;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px 30px;
+    border: 5px solid var(--title-color);
+    border-radius: 25px;
     font-size: 20px;
     color: var(--text-color);
     transition: all .3s;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    text-align: center;
 }
 
-.contact__buttons_container button:hover {
-    box-shadow: 0 5px 40px 5px var(--title-color);
+.contact__buttons_container a:hover {
+    background-color: var(--title-color-alt);
+}
+
+.contact__buttons_container a:focus {
+    background: var(--body-color);
+    transform: translateY(.5rem);
+    box-shadow: none;
+    box-shadow: 10px 10px 60px 10px var(--body-color);
 }
 
 .contact__buttons_container i {
-    margin: 10px;
+    margin: 15px;
+    font-size: 20px;
+    transition: all .3s;
+}
+
+.contact__buttons_container a:hover i {
+    color: var(--title-color);
 }
 
 .contact__title {
@@ -451,6 +467,41 @@ button {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contact__buttons_container a {
+        background-color: var(--body-color);
+        outline: none;
+        padding: 45px 100px;
+        border: 5px solid var(--title-color);
+        border-radius: 35px;
+        font-size: 30px;
+        color: var(--text-color);
+        transition: all .3s;
+        font-weight: 600;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+    .contact__buttons_container a:hover {
+        background-color: var(--title-color-alt);
+    }
+
+    .contact__buttons_container a:active {
+        background: var(--body-color);
+        transform: translateY(.5rem);
+        box-shadow: none;
+        box-shadow: 10px 10px 60px 10px var(--body-color);
+    }
+
+    .contact__buttons_container i {
+        margin: 15px;
+        font-size: 28px;
+        transition: all .3s;
+    }
+
+    .contact__buttons_container a:hover i {
+        color: var(--title-color);
+    }
 }
 
 /* For Tab */
@@ -496,6 +547,41 @@ button {
     .about__description {
         font-size: 20px;
     }
+
+    .contact__buttons_container a {
+        background-color: var(--body-color);
+        outline: none;
+        padding: 45px 100px;
+        border: 5px solid var(--title-color);
+        border-radius: 35px;
+        font-size: 30px;
+        color: var(--text-color);
+        transition: all .3s;
+        font-weight: 600;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+    .contact__buttons_container a:hover {
+        background-color: var(--title-color-alt);
+    }
+
+    .contact__buttons_container a:active {
+        background: var(--body-color);
+        transform: translateY(.5rem);
+        box-shadow: none;
+        box-shadow: 10px 10px 60px 10px var(--body-color);
+    }
+
+    .contact__buttons_container i {
+        margin: 15px;
+        font-size: 28px;
+        transition: all .3s;
+    }
+
+    .contact__buttons_container a:hover i {
+        color: var(--title-color);
+    }
 }
 
 .colorise-buttons {
@@ -515,6 +601,6 @@ button {
 
 /* Navbar Shadow */
 .shadow {
-    box-shadow: 0 -2px 10px var(--menu-shadow);
+    box-shadow: 0 -1px 30px var(--menu-shadow);
     transition: all .4s;
 }
