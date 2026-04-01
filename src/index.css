@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fafaf8;
+  --bg-secondary: #f4f3f0;
+  --border: #e8e6e1;
+  --border-hover: #c8c6c0;
+  --text: #1a1a18;
+  --muted: #6b6a65;
+  --accent: #1a6b3a;
+  --accent-light: #e8f3ec;
+  --serif: "Instrument Serif", serif;
+  --mono: "DM Mono", monospace;
+  --sans: "Geist", sans-serif;
+  --nav-h: 56px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --transition: 0.18s ease;
+}
+
+[data-theme="dark"] {
+  --bg: #111110;
+  --bg-secondary: #1a1a18;
+  --border: #2a2a28;
+  --border-hover: #3a3a38;
+  --text: #e8e7e2;
+  --muted: #8a8a84;
+  --accent: #4ade80;
+  --accent-light: #0f2018;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
